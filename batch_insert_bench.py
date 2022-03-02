@@ -18,7 +18,7 @@ with pg.connect(
         values
         """
 
-        citys = ['nanjing', 'beijing', 'shanghai', 'hangzhou']
+        cities = ['nanjing', 'beijing', 'shanghai', 'hangzhou']
         total_elapse = 0
         date_format_str = '%Y-%m-%d, %H:%M:%S'
         max_loop = 900
@@ -48,7 +48,7 @@ with pg.connect(
                         ,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%d,%d)" % (
                         str(datetime.datetime(2022, 3, 1, 14, 0, 0) + delta),
                         random.randint(1, 100),
-                        random.choice(citys),
+                        random.choice(cities),
                         random.random() * 100,
                         random.random() * 100,
                         random.random() * 100,

@@ -23,7 +23,7 @@ with pg.connect(
             %(clouds_percent)s, %(weather_type_id)s
         )
         """
-        citys = ['nanjing', 'beijing', 'shanghai', 'hangzhou']
+        cities = ['nanjing', 'beijing', 'shanghai', 'hangzhou']
 
         total_elapse = 0
         date_format_str = '%Y-%m-%d, %H:%M:%S'
@@ -45,7 +45,7 @@ with pg.connect(
                 template = {
                     'time': datetime.datetime(2022, 3, 1, 14, 0, 0) + delta,
                     'timezone_shift': random.randint(1, 100),
-                    'city_name': random.choice(citys),
+                    'city_name': random.choice(cities),
                     'temp_c': random.random() * 100,
                     'feels_like_c': random.random() * 100,
                     'temp_min_c': random.random() * 100,
